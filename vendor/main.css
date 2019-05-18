@@ -1,0 +1,42 @@
+body{
+	background-image: url("../img/1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+header{
+	height: 10vh;
+}
+footer{
+	height: 15vh;
+}
+video{
+	width: 100%;
+	height: 100%;
+}
+.card, #panel-video, #lista_videos{
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+}
+#panel-video{
+	visibility: hidden;
+	height: 75vh;
+}
+#logo_sistema{
+	width: 35px;
+	height: 35px;
+}
+#lista_videos{
+	display: block;
+	height: 75vh;
+	overflow-y: auto;
+}
+#lista_jugadores{
+	display: block;
+	height: 33rem;
+	overflow-y: auto;
+}
+#lista{
+	display: block;
+	height: 60vh;
+	overflow-y: auto;
+}
