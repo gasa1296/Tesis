@@ -7,7 +7,7 @@ header{
 	height: 10vh;
 }
 footer{
-	height: 15vh;
+	height: 10vh;
 }
 video{
 	width: 100%;
@@ -19,7 +19,7 @@ video{
 }
 #panel-video{
 	visibility: hidden;
-	height: 75vh;
+	height: 80vh;
 }
 #logo_sistema{
 	width: 35px;
@@ -27,7 +27,7 @@ video{
 }
 #lista_videos{
 	display: block;
-	height: 75vh;
+	height: 80vh;
 	overflow-y: auto;
 }
 #lista_jugadores{
@@ -37,6 +37,6 @@ video{
 }
 #lista{
 	display: block;
-	height: 60vh;
+	height: 70vh;
 	overflow-y: auto;
 }

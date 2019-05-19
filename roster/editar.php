@@ -30,11 +30,11 @@ $row = mysqli_fetch_assoc($result);
 				<div class="col-lg-4 form-group">
 					<input type="hidden" name="id" value=<?php echo $_GET['id'];?>>
 					<label for="nombre">First Name</label>
-					<input class="form-control" id="nombre" name="nombre" placeholder="First Name" value="<?php echo $row["nombre"]; ?>" required>
+					<input class="form-control" id="nombre" name="nombre" placeholder="First Name" value="<?php echo $row["nombre"]; ?>">
 				</div>
 				<div class="col-lg-4 form-group">
 					<label for="apellido">Last Name</label>
-					<input class="form-control" id="apellido" name="apellido" placeholder="Last Name" value="<?php echo $row["apellido"]; ?>" required>
+					<input class="form-control" id="apellido" name="apellido" placeholder="Last Name" value="<?php echo $row["apellido"]; ?>">
 				</div>
 				<div class="col-lg-4 form-group">
 					<label for="numero">Number</label>
@@ -44,27 +44,27 @@ $row = mysqli_fetch_assoc($result);
 			<div class="row">
 				<div class="col-lg-6 form-group">
 					<label for="camisa">Image's Number</label><br>
-					<input type="file" name="camisa" id="camisa" placeholder="Camisa" required>
+					<input type="file" name="camisa" id="camisa" placeholder="Camisa">
 				</div>
 				<div class="col-lg-6 form-group">
                     <label for="foto_perfil">Player's Photo</label><br>
-                    <input type="file" name="foto_perfil" id="foto_perfil" required>
+                    <input type="file" name="foto_perfil" id="foto_perfil">
                 </div>
 			</div>
 			<div class="row">
 				<div class="col-lg-3 form-group">
 					<label for="fecha">Birth Date</label>
-					<input type="date" class="form-control" id="fecha" name="fecha" placeholder="Birth Date" min="1975-01-01" max="2018-01-01" value="<?php echo $row["fecha_nacimiento"]; ?>" required>
+					<input type="date" class="form-control" id="fecha" name="fecha" placeholder="Birth Date" min="1975-01-01" max="2018-01-01" value="<?php echo $row["fecha_nacimiento"]; ?>">
 				</div>
 				<div class="col-lg-4 form-group">
 					<label for="lugar">Birth place</label>
-					<input type="text" class="form-control" id="lugar" name="lugar" placeholder="Birth place" value="<?php echo $row["lugar_nacimiento"]; ?>"required>
+					<input type="text" class="form-control" id="lugar" name="lugar" placeholder="Birth place" value="<?php echo $row["lugar_nacimiento"]; ?>">
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-lg-4 form-group">
 					<label for="posicion">Posición</label>
-					<select class="form-control" id="posicion" name="posicion" required>
+					<select class="form-control" id="posicion" name="posicion">
 						<option value="<?php echo $row["posicion"]; ?>" selected>Select</option>
 						<option value="P">Pitcher</option>
 						<option value="C">Catcher</option>
@@ -74,7 +74,7 @@ $row = mysqli_fetch_assoc($result);
 				</div>
 				<div class="col-lg-4 form-group">
 					<label for="lanza">Lanza</label>
-					<select class="form-control" name="lanza" id="lanza" required>
+					<select class="form-control" name="lanza" id="lanza">
 						<option value="<?php echo $row["lanza"]; ?>" selected>Select</option>
 						<option value="D">Right</option>
 						<option value="Z">Left</option>
@@ -83,7 +83,7 @@ $row = mysqli_fetch_assoc($result);
 				</div>
 				<div class="col-lg-4 form-group">
 					<label for="batea">Batea</label>
-					<select class="form-control" name="batea" id="batea" required>
+					<select class="form-control" name="batea" id="batea">
 						<option value="<?php echo $row["batea"]; ?>" selected>Select</option>
 						<option value="D">Right</option>
 						<option value="Z">Left</option>

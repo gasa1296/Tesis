@@ -4,7 +4,7 @@ include"../header.php";
 <body>
 	<br>
 	<!-- Page Content -->
-	<div class="container"><br>
+	<div class="container">
 		<div class="col-lg-12">
 			<div class="card">
 				<div class="card-header">
