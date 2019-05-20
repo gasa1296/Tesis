@@ -23,7 +23,7 @@ include "../sessionsheader.php";
 	<script src="../vendor/main.js"></script>
 </head>
 <header>
-<!-- Navigation -->
+<!-- Navigation - Ggg -->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		 	<div class="container">
 				<a class="navbar-brand" href="../inicio"><img src="../img/favicon.png" id="logo_sistema"> Videoroom</a>

@@ -40,3 +40,9 @@ video{
 	height: 70vh;
 	overflow-y: auto;
 }
+.nav-link{
+	color: #fff;
+}
+.nav-link:hover{
+	color: #999999;
+}
