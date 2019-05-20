@@ -1,5 +1,5 @@
 <?php 
-	include "../header.php";
+	include "../connection.php";
 	if (isset($_GET ['jugador'])) {
 		$datos = $_GET ['jugador'];
 		$sql = "SELECT `id`, `nombre`, `apellido` FROM `jugador`";
@@ -23,11 +23,11 @@
 					<i class="far fa-edit"></i>
 					</button>
 					</a>';
-					$sugerencia ['listaResultados'] = $sugerencia ['listaResultados']."<tr>
-					<td class='col-xs-2' id='acc'>".$jugador['id']."</td>
-					<td class='col-xs-2' id='acc'>".$jugador['nombre']."</td>
-					<td class='col-xs-2' id='acc'>".$jugador['apellido']."</td>
-					<td class='col-xs-2' id='acc'>".$detalles."</td>
+					$sugerencia['listaResultados'] = $sugerencia['listaResultados']."<tr>
+					<td class='col-xs-2'>".$jugador['id']."</td>
+					<td class='col-xs-2'>".$jugador['nombre']."</td>
+					<td class='col-xs-2'>".$jugador['apellido']."</td>
+					<td class='col-xs-2'>".$detalles."</td>
 					</tr>";
 					$sugerencia ['nroResultados']++;
 				}

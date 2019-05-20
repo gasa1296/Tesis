@@ -6,7 +6,6 @@ if($_FILES['camisa']["name"] != '' && $_FILES['foto_perfil']["name"] != ''){
 	$foto_perfil=archivo('foto_perfil', '../img/jugadores');
 	if($camisa!='' && $foto_perfil!=''){
 		$sql = "UPDATE jugador SET nombre='$_POST[nombre]', apellido='$_POST[apellido]', fecha_nacimiento='$_POST[fecha]', lugar_nacimiento='$_POST[lugar]', lanza='$_POST[lanza]', batea='$_POST[batea]', posicion='$_POST[posicion]', imagen='$camisa', foto_perfil='$foto_perfil' WHERE id='$_POST[id]'";
-		echo $sql;
 		if (mysqli_query($conn, $sql)) {
 			header("location: index.php");
 			die();
@@ -18,7 +17,6 @@ if($_FILES['camisa']["name"] != '' && $_FILES['foto_perfil']["name"] != ''){
 }
 else{
 	$sql = "UPDATE jugador SET nombre='$_POST[nombre]', apellido='$_POST[apellido]', fecha_nacimiento='$_POST[fecha]', lugar_nacimiento='$_POST[lugar]', lanza='$_POST[lanza]', batea='$_POST[batea]', posicion='$_POST[posicion]' WHERE id='$_POST[id]'";
-	echo $sql;
 	if (mysqli_query($conn, $sql)) {
 		header("location: index.php");
 		die();

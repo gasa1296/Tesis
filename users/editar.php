@@ -27,7 +27,7 @@ if (mysqli_num_rows($result) > 0) {
 							</a>
 						</div>
 						<div class="col-lg-3">
-							<h3 class="text-center">Edit Team</h3>
+							<h3 class="text-center">Edit User</h3>
 						</div>
 						<div class="col-xs-1 col-lg-1">
 						</div>

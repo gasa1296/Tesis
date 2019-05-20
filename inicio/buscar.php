@@ -28,10 +28,7 @@ include"../header.php";
 								<table class="table">
 									<thead>
 										<tr>
-											<th scope="col-xs-2">id</th>
-											<th scope="col-xs-2">First Name</th>
-											<th scope="col-xs-2">Last Name</th>
-											<th scope="col-xs-2">Options</th>
+											<th class="col-xs-2">Players</th>
 										</tr>
 									</thead>
 									<tbody id="lista_jugadores">
