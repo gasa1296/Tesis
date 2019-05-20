@@ -1,6 +1,6 @@
 <?php
 include"../header.php";
-
+$fecha=date("Y-m-d");
 $id=@$_GET['id'];
 
 $sql = "SELECT * FROM calendario WHERE id='$id'";
@@ -37,13 +37,16 @@ if (mysqli_num_rows($result) > 0) {
 							<div class="col-lg-3 form-group">
 								<label for="nombre">Visiting Team</label>
 								<select class="form-control" name="equipo" id="equipo">
-									<option value="<?php echo $row['equipo'];?>"></option>
 									<?php
 									$sql1 = "SELECT id, nombre FROM equipo where estado=1";
 									$result1 = mysqli_query($conn, $sql1);
 									if (mysqli_num_rows($result1) > 0){
 										while($row1 = mysqli_fetch_assoc($result1)) {
-											echo"<option value=".$row1['id'].">".$row1['nombre']."</option>";
+											echo"<option value=".$row1['id'];
+											if($row['equipo']==$row1['id']){
+												echo"selected";
+											}
+											echo">".$row1['nombre']."</option>";
 										}
 									}
 									?>
@@ -51,7 +54,7 @@ if (mysqli_num_rows($result) > 0) {
 							</div>
 							<div class="col-lg-3 form-group">
 								<label for="fecha">Game Date</label>
-								<input type="date" name="fecha" id="fecha" class="form-control" value="<?php echo $row['fecha'];?>">
+								<input type="date" name="fecha" id="fecha" class="form-control" min="<?php echo $fecha; ?>" value="<?php echo $row['fecha'];?>">
 							</div>
 							<input type="text" name="id" id value="<?php echo $id; ?>" hidden>
 						</div>
@@ -59,13 +62,16 @@ if (mysqli_num_rows($result) > 0) {
 							<div class="col-lg-3 form-group">
 								<label for="nombre">Season</label>
 								<select class="form-control" name="temporada" id="temporada">
-									<option value="<?php echo $row['id_temporada'];?>"></option>
 									<?php
 									$sql1 = "SELECT id, descripcion FROM temporada";
 									$result1 = mysqli_query($conn, $sql1);
 									if (mysqli_num_rows($result1) > 0){
 										while($row1 = mysqli_fetch_assoc($result1)) {
-											echo"<option value=".$row1['id'].">".$row1['descripcion']."</option>";
+											echo"<option value=".$row1['id'];
+											if ($row['id_temporada'] == $row1['id']){
+												echo " selected";
+											}
+											echo ">".$row1['descripcion']."</option>";
 										}
 									}
 									?>
@@ -75,14 +81,13 @@ if (mysqli_num_rows($result) > 0) {
 						<div class="row">
 							<div class="col-lg-3 form-group">
 								<label for="nro_juego">Game Number</label>
-								<input type="number" name="nro_juego" id="nro_juego" class="form-control" value="<?php echo $row['nro_juego'];?>">
+								<input type="text" name="nro_juego" id="nro_juego" class="form-control" pattern="[A-Za-z0-9]{1,3}" title="Sin espacio o símbolos, de 1 a 3 dígitos" value="<?php echo $row['nro_juego'];?>">
 							</div>
 							<div class="col-lg-3 form-group">
 								<label for="instancia_temporada">Season Instance</label>
 								<select class="form-control" name="instancia_temporada" id="instancia_temporada">
-									<option value="<?php echo $row['instancia_temporada'];?>"></option>
-									<option value="R">Regular</option>
-									<option value="PT">Post-Season</option> 
+									<option value="R" <?php if($row['instancia_temporada']=='R'){echo'selected';} ?>>Regular</option>
+									<option value="PT" <?php if($row['instancia_temporada']=='PT'){echo'selected';} ?>>Post-Season</option> 
 								</select>
 							</div>
 						</div>

@@ -1,5 +1,6 @@
 <?php
 include"../header.php";
+$fecha=date("Y-m-d");
 ?>
 <body>
 	<div class="container"><br>
@@ -42,7 +43,7 @@ include"../header.php";
 							</div>
 							<div class="col-lg-3 form-group">
 								<label for="fecha">Game Date</label>
-								<input type="date" name="fecha" id="fecha" class="form-control" min="2017-01-01" required>
+								<input type="date" name="fecha" id="fecha" class="form-control" min="<?php echo $fecha; ?>" required>
 							</div>
 						</div>
 						<div class="row">
@@ -65,7 +66,7 @@ include"../header.php";
 						<div class="row">
 							<div class="col-lg-3 form-group">
 								<label for="nro_juego">Game Number</label>
-								<input type="number" name="nro_juego" id="nro_juego" class="form-control" required>
+								<input type="text" name="nro_juego" id="nro_juego" class="form-control" pattern="[A-Za-z0-9]{1,3}" title="Sin espacio o símbolos, de 1 a 3 dígitos" required>
 							</div>
 							<div class="col-lg-3 form-group">
 								<label for="instancia_temporada">Season Instance</label>

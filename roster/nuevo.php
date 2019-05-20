@@ -26,11 +26,11 @@ include"../header.php";
 			<div class="row">
 				<div class="col-lg-3 form-group">
 					<label for="nombre">First Name</label>
-					<input class="form-control" id="nombre" name="nombre" placeholder="First Name" required>
+					<input type="text" class="form-control" id="nombre" pattern="[A-Za-z]{2,10}" title="Solo letras. De 2 a 10 caracteres" name="nombre" placeholder="First Name" required>
 				</div>
 				<div class="col-lg-3 form-group">
 					<label for="apellido">Last Name</label>
-					<input class="form-control" id="apellido" name="apellido" placeholder="Last Name" required>
+					<input type="text" class="form-control" id="apellido" name="apellido" placeholder="Last Name" pattern="[A-Za-z]{2,10}" title="Solo letras. De 2 a 10 caracteres" required>
 				</div>
 				<div class="col-lg-6 form-group">
 					<label for="foto_perfil">Player's Photo</label><br>
@@ -44,7 +44,7 @@ include"../header.php";
 				</div>
 				<div class="col-lg-3 form-group">
 					<label for="lugar">Birth place</label>
-					<input type="text" class="form-control" id="lugar" name="lugar" placeholder="Birth place" required>
+					<input type="text" class="form-control" id="lugar" name="lugar" placeholder="Birth place" minlength="5" maxlength="20" required>
 				</div>
 				<div class="col-lg-6 form-group">
 					<label for="camisa">Image's Number</label><br>

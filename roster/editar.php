@@ -31,11 +31,11 @@ $row = mysqli_fetch_assoc($result);
 				<div class="col-lg-3 form-group">
 					<input type="hidden" name="id" value=<?php echo $_GET['id'];?>>
 					<label for="nombre">First Name</label>
-					<input class="form-control" id="nombre" name="nombre" placeholder="First Name" value="<?php echo $row["nombre"]; ?>">
+					<input class="form-control" id="nombre" name="nombre" placeholder="First Name" pattern="[A-Za-z]{2,10}" title="Solo letras. De 2 a 10 caracteres" value="<?php echo $row["nombre"]; ?>">
 				</div>
 				<div class="col-lg-3 form-group">
 					<label for="apellido">Last Name</label>
-					<input class="form-control" id="apellido" name="apellido" placeholder="Last Name" value="<?php echo $row["apellido"]; ?>">
+					<input class="form-control" id="apellido" name="apellido" placeholder="Last Name" pattern="[A-Za-z]{2,10}" title="Solo letras. De 2 a 10 caracteres" value="<?php echo $row["apellido"]; ?>">
 				</div>
 				<div class="col-lg-6 form-group">
                     <label for="foto_perfil">Player's Photo</label><br>
@@ -51,7 +51,7 @@ $row = mysqli_fetch_assoc($result);
 				</div>
 				<div class="col-lg-3 form-group">
 					<label for="lugar">Birth place</label>
-					<input type="text" class="form-control" id="lugar" name="lugar" placeholder="Birth place" value="<?php echo $row["lugar_nacimiento"]; ?>">
+					<input type="text" class="form-control" id="lugar" name="lugar" placeholder="Birth place" minlength="5" maxlength="20" value="<?php echo $row["lugar_nacimiento"]; ?>">
 				</div>
 				<div class="col-lg-6 form-group">
 					<label for="camisa">Image's Number</label><br>
@@ -66,29 +66,26 @@ $row = mysqli_fetch_assoc($result);
 				<div class="col-lg-3 form-group">
 					<label for="posicion">Posición</label>
 					<select class="form-control" id="posicion" name="posicion">
-						<option value="<?php echo $row["posicion"]; ?>" selected>Select</option>
-						<option value="P">Pitcher</option>
-						<option value="C">Catcher</option>
-						<option value="IF">Infielder</option>
-						<option value="OF">Outfielder</option>
+						<option value="P" <?php if($row['posicion']=='P'){echo'selected';} ?>>Pitcher</option>
+						<option value="C" <?php if($row['posicion']=='C'){echo'selected';} ?>>Catcher</option>
+						<option value="IF" <?php if($row['posicion']=='IF'){echo'selected';} ?>>Infielder</option>
+						<option value="OF" <?php if($row['posicion']=='OF'){echo'selected';} ?>>Outfielder</option>
 					</select>
 				</div>
 				<div class="col-lg-3 form-group">
 					<label for="lanza">Lanza</label>
 					<select class="form-control" name="lanza" id="lanza">
-						<option value="<?php echo $row["lanza"]; ?>" selected>Select</option>
-						<option value="D">Right</option>
-						<option value="Z">Left</option>
-						<option value="A">Ambidextrous</option>   
+						<option value="D" <?php if($row['lanza']=='D'){echo'selected';} ?>>Right</option>
+						<option value="Z" <?php if($row['lanza']=='Z'){echo'selected';} ?>>Left</option>
+						<option value="A" <?php if($row['lanza']=='A'){echo'selected';} ?>>Ambidextrous</option>   
 					</select>
 				</div>
 				<div class="col-lg-3 form-group">
 					<label for="batea">Batea</label>
 					<select class="form-control" name="batea" id="batea">
-						<option value="<?php echo $row["batea"]; ?>" selected>Select</option>
-						<option value="D">Right</option>
-						<option value="Z">Left</option>
-						<option value="A">Ambidextrous</option>   
+						<option value="D" <?php if($row['batea']=='D'){echo'selected';} ?>>Right</option>
+						<option value="Z" <?php if($row['batea']=='Z'){echo'selected';} ?>>Left</option>
+						<option value="A" <?php if($row['batea']=='A'){echo'selected';} ?>>Ambidextrous</option>   
 					</select>  
 				</div>
 			</div>

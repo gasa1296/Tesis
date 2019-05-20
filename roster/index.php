@@ -57,7 +57,6 @@ include"../header.php";
 											<th class="col-xs-1"> Bat </th>
 											<th class="col-xs-1"> Throw </th>
 											<th class="col-xs-1"> Birth Date </th>
-											<th class="col-xs-1"> Status </th>
 											<th class="col-xs-1"> Option</th>
 										</tr>
 									</thead>
@@ -68,7 +67,7 @@ include"../header.php";
 											if ($result && mysqli_num_rows($result) > 0) {
 												while($row = mysqli_fetch_assoc($result)) {
 													$modificar='<a href="editar.php?id='.$row['id'].'" role="button"><button type="button" class="btn btn-warning"><i class="far fa-edit"></i></button></a>';
-													echo"<tr><td class='col-xs-1'>".$row['nombre']."</td><td class='col-xs-1'>".$row['apellido']."</td><td class='col-xs-1'>".$row['numero']."</td><td class='col-xs-1'>".$row['batea']."</td><td class='col-xs-1'>".$row['lanza']."</td><td class='col-xs-1'>".$row['fecha_nacimiento']."</td><td class='col-xs-1'>".$row['estado']."</td><td class='col-xs-1'>".$modificar."</td><td class='col-xs-1'><a class='btn ".colorBoton($row['R32'])."' role='button' href='r32.php?id=".$row['id']."'><b>R</b>32</a></td></tr>";
+													echo"<tr><td class='col-xs-1'>".$row['nombre']."</td><td class='col-xs-1'>".$row['apellido']."</td><td class='col-xs-1'>".$row['numero']."</td><td class='col-xs-1'>".$row['batea']."</td><td class='col-xs-1'>".$row['lanza']."</td><td class='col-xs-1'>".$row['fecha_nacimiento']."</td><td class='col-xs-1'>".$modificar."</td><td class='col-xs-1'><a class='btn ".colorBoton($row['R32'])."' role='button' href='r32.php?id=".$row['id']."'><b>R</b>32</a></td></tr>";
 												}
 											} else {
 												echo "<tr>0 results</tr>";
@@ -87,7 +86,6 @@ include"../header.php";
 											<th class="col-xs-1"> Bat </th>
 											<th class="col-xs-1"> Throw </th>
 											<th class="col-xs-1"> Birth Date </th>
-											<th class="col-xs-1"> Status </th>
 											<th class="col-xs-1"> Option</th>
 										</tr>
 									</thead>
@@ -99,7 +97,7 @@ include"../header.php";
 											if ($result && mysqli_num_rows($result) > 0) {
 												while($row = mysqli_fetch_assoc($result)) {
 													$modificar='<a href="editar.php?id='.$row['id'].'" role="button"><button type="button" class="btn btn-warning"><i class="far fa-edit"></i></button></a>';
-													echo"<tr><td class='col-xs-1'>".$row['nombre']."</td><td class='col-xs-1'>".$row['apellido']."</td><td class='col-xs-1'>".$row['numero']."</td><td class='col-xs-1'>".$row['batea']."</td><td class='col-xs-1'>".$row['lanza']."</td><td class='col-xs-1'>".$row['fecha_nacimiento']."</td><td class='col-xs-1'>".$row['estado']."</td><td class='col-xs-1'>".$modificar."</td><td class='col-xs-1'><a class='btn ".colorBoton($row['R32'])."' role='button' href='r32.php?id=".$row['id']."'><b>R</b>32</a></td></tr>";
+													echo"<tr><td class='col-xs-1'>".$row['nombre']."</td><td class='col-xs-1'>".$row['apellido']."</td><td class='col-xs-1'>".$row['numero']."</td><td class='col-xs-1'>".$row['batea']."</td><td class='col-xs-1'>".$row['lanza']."</td><td class='col-xs-1'>".$row['fecha_nacimiento']."</td><td class='col-xs-1'>".$modificar."</td><td class='col-xs-1'><a class='btn ".colorBoton($row['R32'])."' role='button' href='r32.php?id=".$row['id']."'><b>R</b>32</a></td></tr>";
 												}
 											} else {
 												echo "<tr>0 results</tr>";
@@ -118,7 +116,6 @@ include"../header.php";
 											<th class="col-xs-1"> Bat </th>
 											<th class="col-xs-1"> Throw </th>
 											<th class="col-xs-1"> Birth Date </th>
-											<th class="col-xs-1"> Status </th>
 											<th class="col-xs-1"> Option</th>
 										</tr>
 									</thead>
@@ -129,7 +126,7 @@ include"../header.php";
 											if ($result && mysqli_num_rows($result) > 0) {
 												while($row = mysqli_fetch_assoc($result)) {
 													$modificar='<a href="editar.php?id='.$row['id'].'" role="button"><button type="button" class="btn btn-warning"><i class="far fa-edit"></i></button></a>';
-													echo"<tr><td class='col-xs-1'>".$row['nombre']."</td><td class='col-xs-1'>".$row['apellido']."</td><td class='col-xs-1'>".$row['numero']."</td><td class='col-xs-1'>".$row['batea']."</td><td class='col-xs-1'>".$row['lanza']."</td><td class='col-xs-1'>".$row['fecha_nacimiento']."</td><td class='col-xs-1'>".$row['estado']."</td><td class='col-xs-1'>".$modificar."</td><td class='col-xs-1'><a class='btn ".colorBoton($row['R32'])."' role='button' href='r32.php?id=".$row['id']."'><b>R</b>32</a></td></tr>";
+													echo"<tr><td class='col-xs-1'>".$row['nombre']."</td><td class='col-xs-1'>".$row['apellido']."</td><td class='col-xs-1'>".$row['numero']."</td><td class='col-xs-1'>".$row['batea']."</td><td class='col-xs-1'>".$row['lanza']."</td><td class='col-xs-1'>".$row['fecha_nacimiento']."</td><td class='col-xs-1'>".$modificar."</td><td class='col-xs-1'><a class='btn ".colorBoton($row['R32'])."' role='button' href='r32.php?id=".$row['id']."'><b>R</b>32</a></td></tr>";
 												}
 											} else {
 												echo "<tr>0 results</tr>";
@@ -148,7 +145,6 @@ include"../header.php";
 											<th class="col-xs-1"> Bat </th>
 											<th class="col-xs-1"> Throw </th>
 											<th class="col-xs-1"> Birth Date </th>
-											<th class="col-xs-1"> Status </th>
 											<th class="col-xs-1"> Option</th>
 										</tr>
 									</thead>
@@ -159,7 +155,7 @@ include"../header.php";
 											if ($result && mysqli_num_rows($result) > 0) {
 												while($row = mysqli_fetch_assoc($result)) {
 													$modificar='<a href="editar.php?id='.$row['id'].'" role="button"><button type="button" class="btn btn-warning"><i class="far fa-edit"></i></button></a>';
-													echo"<tr><td class='col-xs-1'>".$row['nombre']."</td><td class='col-xs-1'>".$row['apellido']."</td><td class='col-xs-1'>".$row['numero']."</td><td class='col-xs-1'>".$row['batea']."</td><td class='col-xs-1'>".$row['lanza']."</td><td class='col-xs-1'>".$row['fecha_nacimiento']."</td><td class='col-xs-1'>".$row['estado']."</td><td class='col-xs-1'>".$modificar."</td><td class='col-xs-1'><a class='btn ".colorBoton($row['R32'])."' role='button' href='r32.php?id=".$row['id']."'><b>R</b>32</a></td></tr>";
+													echo"<tr><td class='col-xs-1'>".$row['nombre']."</td><td class='col-xs-1'>".$row['apellido']."</td><td class='col-xs-1'>".$row['numero']."</td><td class='col-xs-1'>".$row['batea']."</td><td class='col-xs-1'>".$row['lanza']."</td><td class='col-xs-1'>".$row['fecha_nacimiento']."</td><td class='col-xs-1'>".$modificar."</td><td class='col-xs-1'><a class='btn ".colorBoton($row['R32'])."' role='button' href='r32.php?id=".$row['id']."'><b>R</b>32</a></td></tr>";
 												}
 											} else {
 												echo "<tr>0 results</tr>";
@@ -167,7 +163,7 @@ include"../header.php";
 										?>
 									</tbody>
 								</table>
-							</div>
+							</div>	
 						</div>
 					</div>
 				</div>

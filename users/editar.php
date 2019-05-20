@@ -39,12 +39,12 @@ if (mysqli_num_rows($result) > 0) {
 						<div class="row">
 							<div class="col-lg-3 form-group">
 								<label for="nombre">First Name</label>
-								<input type="text" name="nombre" id="nombre" class="form-control" value="<?php echo $row['nombre'] ?>" required>
+								<input type="text" name="nombre" id="nombre" class="form-control" pattern="[A-Za-z- ]{5,20}" title="Solo letras y espacios. De 5 a 20 caracteres" value="<?php echo $row['nombre'] ?>" required>
 								<input type="text" name="id" value="<?php echo $id; ?>" hidden>
 							</div>
 							<div class="col-lg-3 form-group">
 								<label for="apellido">Last Name</label>
-								<input type="text" name="apellido" id="apellido" class="form-control" value="<?php echo $row['apellido']; ?>" required>
+								<input type="text" name="apellido" id="apellido" pattern="[A-Za-z- ]{5,20}" title="Solo letras y espacios. De 5 a 20 caracteres" class="form-control" value="<?php echo $row['apellido']; ?>" required>
 							</div>
 						</div>
 						<div class="row">
@@ -65,9 +65,8 @@ if (mysqli_num_rows($result) > 0) {
 							<div class="col-lg-3 form-group">
 								<label for="pass2">Access</label>
 								<select name="nivel" id="nivel" class="form-control">
-									<option value=<?php echo $row["nivel"]; ?>></option>
-									<option value=1>Admin</option>
-									<option value=0>Player</option>
+									<option value=1 <?php if($row["nivel"]==1){echo"selected";} ?>>Admin</option>
+									<option value=0 <?php if($row["nivel"]==0){echo"selected";} ?>>Player</option>
 								</select>
 							</div>
 						</div>

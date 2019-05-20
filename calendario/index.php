@@ -44,7 +44,7 @@ include"../header.php";
 								</thead>
 								<tbody>
 									<?php
-									$sql = "SELECT lo1.id, lo1.nro_juego, lo2.nombre, lo1.fecha, lo1.id_temporada, lo1.instancia_temporada, lo1.estado FROM calendario lo1 INNER JOIN equipo lo2 ON lo1.equipo=lo2.id where lo1.estado=0 AND lo1.id_temporada=1 ORDER BY lo1.id";
+									$sql = "SELECT lo1.id, lo1.nro_juego, lo2.nombre, lo1.fecha, lo1.id_temporada, lo1.instancia_temporada, lo1.estado FROM calendario lo1 INNER JOIN equipo lo2 ON lo1.equipo=lo2.id where lo1.estado!=2 AND lo1.id_temporada=1 ORDER BY lo1.id";
 									$result = mysqli_query($conn, $sql);
 									if (mysqli_num_rows($result) > 0){
 										while($row = mysqli_fetch_assoc($result)) {

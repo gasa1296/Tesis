@@ -29,11 +29,11 @@ include"../header.php";
 						<div class="row">
 							<div class="col-lg-3 form-group">
 								<label for="nombre">First Name</label>
-								<input type="text" name="nombre" id="nombre" class="form-control" required>
+								<input type="text" name="nombre" id="nombre" class="form-control" pattern="[A-Za-z- ]{5,20}" title="Solo letras y espacios. De 5 a 20 caracteres" required>
 							</div>
 							<div class="col-lg-3 form-group">
 								<label for="apellido">Last Name</label>
-								<input type="text" name="apellido" id="apellido" class="form-control" required>
+								<input type="text" name="apellido" id="apellido" class="form-control" pattern="[A-Za-z- ]{5,20}" title="Solo letras y espacios. De 5 a 20 caracteres" required>
 							</div>
 						</div>
 						<div class="row">
