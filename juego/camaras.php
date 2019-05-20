@@ -18,7 +18,7 @@ if (mysqli_query($conn, $sql)) {
 	<div class="row">
 		<div class="col-lg-3"></div>
 		<div id="comenzar" class="col-lg-6">
-			<button type="button" class="btn btn-success btn-lg btn-block" onclick="loadDoc()"><h1>Let the play Begins</h1></button>
+			<button type="button" class="btn btn-success btn-lg btn-block" onclick="loadDoc()"><h1>Play Ball!</h1></button>
 		</div>
 		<div class="col-lg-3"></div>
 	</div>
