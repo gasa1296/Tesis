@@ -13,6 +13,7 @@ if($_POST['correo']==$row['correo'] && isset($_POST['correo']) && $_POST['correo
 		$_SESSION['nombre']=$row['nombre'];
 		$_SESSION['apellido']=$row['apellido'];
 		$_SESSION['jugador']=$row['id_jugador'];
+		$_SESSION['nivel']=$row['nivel'];
 		$_SESSION['ip'] = $_SERVER['REMOTE_ADDR'];
 		header("location: index.php");
 	}else{
